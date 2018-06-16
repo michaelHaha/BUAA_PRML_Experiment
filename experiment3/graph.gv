@@ -1,0 +1,32 @@
+graph {
+	graph [bgcolor="#D1EEEE" fontcolor=black fontname=Helvetica fontsize=16 label="Decision Tree for Iris Dataset"]
+	node [color=black fillcolor="#EE2C2C" fontcolor=white fontname="Lucida Grande" shape=egg style=filled]
+	edge [arrowhead=open color=black fontcolor=black fontname=Courier fontsize=12 style=dashed]
+	"Petal Length>=2.45?"
+	"Petal Width>=1.75?"
+	"Petal Length>=4.95?"
+	"Petal Width>=1.65?"
+	"Petal Width>=1.55?"
+	"Sepal Length>=6.95?"
+	"Petal Length>=4.85?"
+	"Sepal Length>=5.95?"
+	"Iris-virginica"
+	"Iris-versicolor"
+	"Iris-setosa"
+	"Petal Length>=4.85?" -- "Sepal Length>=5.95?" [label=Yes]
+	"Petal Length>=4.95?" -- "Petal Width>=1.65?" [label=Yes]
+	"Petal Width>=1.55?" -- "Iris-virginica" [label=Yes]
+	"Sepal Length>=6.95?" -- "Iris-versicolor" [label=Yes]
+	"Petal Width>=1.75?" -- "Petal Length>=4.95?" [label=Yes]
+	"Petal Width>=1.65?" -- "Iris-versicolor" [label=Yes]
+	"Petal Length>=2.45?" -- "Iris-setosa" [label=Yes]
+	"Sepal Length>=5.95?" -- "Iris-versicolor" [label=Yes]
+	"Petal Width>=1.65?" -- "Iris-virginica" [label=No]
+	"Petal Width>=1.75?" -- "Petal Length>=4.85?" [label=No]
+	"Sepal Length>=6.95?" -- "Iris-virginica" [label=No]
+	"Petal Width>=1.55?" -- "Sepal Length>=6.95?" [label=No]
+	"Petal Length>=4.95?" -- "Petal Width>=1.55?" [label=No]
+	"Petal Length>=4.85?" -- "Iris-virginica" [label=No]
+	"Petal Length>=2.45?" -- "Petal Width>=1.75?" [label=No]
+	"Sepal Length>=5.95?" -- "Iris-virginica" [label=No]
+}
